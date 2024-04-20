@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Smith",
+    "department": "Marketing",
+    "jobTitle": "Marketing Manager",
+    "hireDate": "2023-01-01",
+    "salary": 50000
+  },
+  {
+    "id": 2,
+    "name": "Bob Johnson",
+    "department": "Engineering",
+    "jobTitle": "Software Engineer",
+    "hireDate": "2022-06-15"
+  },
+  {
+    "id": 3,
+    "name": "Charlie Williams",
+    "department": "Sales",
+    "jobTitle": "Sales Representative",
+    "hireDate": null
+  },
+  {
+    "id": 4,
+    "name": "Diana Brown",
+    "department": "Human Resources",
+    "jobTitle": "HR Specialist",
+    "hireDate": "2020-05-08"
+  },
+  {
+    "id": 5,
+    "name": "Ethan Garcia",
+    "department": "Finance",
+    "jobTitle": "Accountant",
+    "hireDate": "2019-11-22"
+  },
+  {
+    "id": 6,
+    "name": "Fiona Hernandez",
+    "department": "Marketing",
+    "jobTitle": "Content Creator",
+    "hireDate": "2024-02-14"
+  },
+  {
+    "id": 7,
+    "name": "Gabriel Moore",
+    "department": "Engineering",
+    "jobTitle": "QA Engineer",
+    "hireDate": "2023-08-07"
+  },
+  {
+    "id": 8,
+    "name": "Hannah Lewis",
+    "department": "Sales",
+    "jobTitle": "Account Manager",
+    "hireDate": "2022-03-09"
+  },
+  {
+    "id": 9,
+    "name": "Isaac Clark",
+    "department": "Human Resources",
+    "jobTitle": "Benefits Administrator",
+    "hireDate": "2021-09-16"
+  },
+  {
+    "id": 10,
+    "name": "Jasmine Young",
+    "department": "Finance",
+    "jobTitle": "Financial Analyst",
+    "hireDate": "2020-04-20"
+  }
+]
