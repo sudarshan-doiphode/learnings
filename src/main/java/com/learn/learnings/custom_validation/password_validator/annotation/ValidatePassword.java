@@ -1,6 +1,6 @@
 package com.learn.learnings.custom_validation.password_validator.annotation;
 
-import com.learn.learnings.custom_validation.validation_class.PasswordValidator;
+import com.learn.learnings.custom_validation.password_validator.validation_class.PasswordValidator;
 import jakarta.validation.Constraint;
 
 import java.lang.annotation.*;
