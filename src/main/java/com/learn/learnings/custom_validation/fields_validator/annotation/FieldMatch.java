@@ -22,7 +22,6 @@ public @interface FieldMatch {
 
     @Target({ElementType.TYPE})
     @Retention(RetentionPolicy.RUNTIME)
-    @Documented
     @interface List {
         FieldMatch[] value();
     }

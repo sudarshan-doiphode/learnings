@@ -1,13 +1,13 @@
 package com.learn.learnings.resttemplate.controller;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.learn.learnings.resttemplate.interceptor.RestTemplateInterceptor;
 import com.learn.learnings.resttemplate.model.Posts;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -25,8 +25,9 @@ public class PostsController {
 
     @GetMapping("/posts")
     public ResponseEntity<Posts> getPosts(){
-        ResponseEntity<Posts> responseEntity = restTemplate.exchange("https://jsonplaceholder.typicode.com/posts/1", HttpMethod.GET, null, Posts.class);
-        return ResponseEntity.ok(responseEntity.getBody());
+//        ResponseEntity<Posts> responseEntity = restTemplate.exchange("https://jsonplaceholder.typicode.com/posts/1", HttpMethod.GET, null, Posts.class);
+        Posts post = restTemplate.getForObject("https://jsonplaceholder.typicode.com/posts/1", Posts.class);
+        return ResponseEntity.ok(post);
     }
 
     @GetMapping("/allPosts")
@@ -34,7 +35,10 @@ public class PostsController {
         ResponseEntity<List<Posts>> responseEntity = restTemplate.exchange("https://jsonplaceholder.typicode.com/posts",
                 HttpMethod.GET,
                 null,
-                new ParameterizedTypeReference<List<Posts>>(){});
+                new ParameterizedTypeReference<>(){});
+        HttpStatusCode statusCode = responseEntity.getStatusCode();
+        HttpHeaders headers = responseEntity.getHeaders();
+        System.out.println("");
         return ResponseEntity.ok(responseEntity.getBody());
     }
 }
